@@ -1,0 +1,22 @@
+{% load static %}
+
+<div class="col-lg-5 col-md-6 col-sm-6">
+    <div class="single-footer-widget">
+        <h6>Newsletter</h6>
+        <p>Stay updated with our latest</p>
+        <div id="mc_embed_signup">
+            <form method="post" class="form-inline">
+                {% csrf_token %}
+                {{ form.email }}
+                <button class="click-btn btn btn-default">
+                    <i class="lnr lnr-arrow-right" aria-hidden="true"></i>
+                </button>
+                <div class="info">
+                    {% for message in messages %}
+                        <p>{{ message }}</p>
+                    {% endfor %}
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
