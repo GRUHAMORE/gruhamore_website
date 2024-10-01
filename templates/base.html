@@ -658,21 +658,6 @@
       </div>
     </footer>
     <!-- End footer Area -->
-
-    $.ajax({
-      type: 'POST',
-      url: '/newsletter/signup/',  // Clean URL without jQuery cache-busting parameters
-      data: {
-          email: $('input[name="EMAIL"]').val(),
-          csrfmiddlewaretoken: '{{ csrf_token }}'  
-      },
-      success: function(response) {
-          alert('Subscription successful!');
-      },
-      error: function(response) {
-          alert('Subscription failed!');
-      }
-  });
   
     <script src="{% static '/js/vendor/jquery-2.2.4.min.js' %}"></script>
     <script
