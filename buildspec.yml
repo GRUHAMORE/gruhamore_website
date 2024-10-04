@@ -1,4 +1,6 @@
 version: 0.2
+runtime-versions:
+  python: 3.8 
 
 environment_variables:
   plaintext:
